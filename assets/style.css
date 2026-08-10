@@ -1,0 +1,1441 @@
+/* ==========================================================
+   INSIGHTFLOW AI
+   Enterprise Business Intelligence Platform
+   Version 2.0
+
+   Developed by:
+   Swaroop K Samantaray
+   ========================================================== */
+
+
+/* ==========================================================
+   1. GLOBAL APPLICATION
+   ========================================================== */
+
+html,
+body,
+[class*="css"] {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+.stApp {
+    background:
+        radial-gradient(
+            circle at 10% 0%,
+            rgba(55, 90, 180, 0.08),
+            transparent 30%
+        ),
+        #0b0f16;
+
+    color: #f5f7fb;
+}
+
+
+/* Main application container */
+
+[data-testid="stAppViewContainer"] {
+    background: #0b0f16;
+}
+
+
+/* Main content */
+
+[data-testid="stAppViewContainer"] > .main {
+    background: #0b0f16;
+}
+
+
+/* Main block */
+
+.block-container {
+    max-width: 1500px;
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+
+/* ==========================================================
+   2. SIDEBAR
+   ========================================================== */
+
+[data-testid="stSidebar"] {
+    background:
+        linear-gradient(
+            180deg,
+            #121927 0%,
+            #101621 50%,
+            #0e141f 100%
+        );
+
+    border-right: 1px solid rgba(150, 170, 210, 0.14);
+}
+
+
+[data-testid="stSidebar"] > div:first-child {
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+/* Sidebar text */
+
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] span {
+    color: #e7ecf5;
+}
+
+
+/* Sidebar headings */
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+    color: #f7f9ff;
+}
+
+
+/* Sidebar divider */
+
+[data-testid="stSidebar"] hr {
+    border-color: rgba(160, 180, 220, 0.15);
+}
+
+
+/* ==========================================================
+   3. SIDEBAR BRANDING
+   ========================================================== */
+
+.sidebar-brand {
+    padding: 0.5rem 0 1rem 0;
+}
+
+.sidebar-brand h1 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.sidebar-brand p {
+    color: #8fa4c7;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+}
+
+
+/* ==========================================================
+   4. STREAMLIT SELECTBOX
+   ========================================================== */
+
+[data-testid="stSelectbox"] label {
+    color: #dbe5f7 !important;
+    font-weight: 600;
+}
+
+
+[data-testid="stSelectbox"] > div > div {
+    background: #0c111a;
+    border: 1px solid rgba(120, 145, 190, 0.18);
+    border-radius: 10px;
+}
+
+
+[data-testid="stSelectbox"] input {
+    color: #ffffff;
+}
+
+
+/* ==========================================================
+   5. STREAMLIT RADIO
+   ========================================================== */
+
+[data-testid="stRadio"] label {
+    color: #e7edf8 !important;
+}
+
+
+[data-testid="stRadio"] [role="radiogroup"] {
+    gap: 0.35rem;
+}
+
+
+/* ==========================================================
+   6. EXPANDERS
+   ========================================================== */
+
+[data-testid="stExpander"] {
+    border: 1px solid rgba(130, 150, 190, 0.18);
+    border-radius: 12px;
+    background: rgba(20, 27, 40, 0.72);
+}
+
+
+[data-testid="stExpander"] summary {
+    color: #f4f7ff;
+    font-weight: 600;
+}
+
+
+[data-testid="stExpander"] summary:hover {
+    color: #8fb4ff;
+}
+
+
+/* ==========================================================
+   7. BUTTONS
+   ========================================================== */
+
+.stButton > button {
+    border-radius: 10px;
+    border: 1px solid rgba(100, 145, 255, 0.3);
+
+    background:
+        linear-gradient(
+            135deg,
+            #377cf5,
+            #5d8cff
+        );
+
+    color: white;
+
+    font-weight: 700;
+
+    padding: 0.55rem 1.2rem;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(55, 124, 245, 0.25);
+
+    background:
+        linear-gradient(
+            135deg,
+            #4b89ff,
+            #709aff
+        );
+}
+
+
+/* ==========================================================
+   8. GLOBAL HEADINGS
+   ========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #f7f9ff;
+    font-weight: 700;
+}
+
+
+h1 {
+    letter-spacing: -0.025em;
+}
+
+
+h2 {
+    letter-spacing: -0.015em;
+}
+
+
+/* ==========================================================
+   9. MARKDOWN
+   ========================================================== */
+
+.stMarkdown p {
+    color: #aebed8;
+    line-height: 1.7;
+}
+
+
+.stMarkdown strong {
+    color: #f5f8ff;
+}
+
+
+/* ==========================================================
+   10. DIVIDERS
+   ========================================================== */
+
+hr {
+    border: none;
+    border-top: 1px solid rgba(150, 170, 210, 0.14);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+/* ==========================================================
+   11. HERO SECTION
+   Cleaned / Premium Version
+   ========================================================== */
+
+.hero-section {
+    position: relative;
+
+    width: 100%;
+
+    padding:
+        3.2rem
+        3.5rem
+        3.4rem
+        3.5rem;
+
+    margin-bottom: 2rem;
+
+    border-radius: 28px;
+
+    border: 1px solid rgba(125, 155, 225, 0.20);
+
+    background:
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(91, 118, 255, 0.17),
+            transparent 38%
+        ),
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(45, 92, 180, 0.10),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #1b2944 0%,
+            #151d31 48%,
+            #1a2148 100%
+        );
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.28);
+
+    overflow: hidden;
+}
+
+
+/* Subtle hero highlight */
+
+.hero-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    right: -100px;
+    top: -120px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(100, 140, 255, 0.13),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   HERO BADGE
+   ========================================================== */
+
+.hero-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding:
+        0.48rem
+        0.9rem;
+
+    margin-bottom: 1.25rem;
+
+    border-radius: 999px;
+
+    border: 1px solid rgba(100, 150, 255, 0.32);
+
+    background:
+        rgba(55, 90, 160, 0.18);
+
+    color: #9dbdff;
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.075em;
+
+    text-transform: uppercase;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* ==========================================================
+   HERO TITLE
+   ========================================================== */
+
+.hero-section h1 {
+    position: relative;
+    z-index: 1;
+
+    margin: 0;
+
+    max-width: 850px;
+
+    font-size:
+        clamp(
+            3rem,
+            5vw,
+            4.7rem
+        );
+
+    line-height: 1.04;
+
+    font-weight: 800;
+
+    letter-spacing: -0.045em;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff 0%,
+            #dbe7ff 45%,
+            #8eb4ff 100%
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* ==========================================================
+   HERO SUBTITLE
+   ========================================================== */
+
+.hero-section h2 {
+    position: relative;
+    z-index: 1;
+
+    margin-top: 1.25rem;
+    margin-bottom: 0;
+
+    max-width: 800px;
+
+    color: #f1f5ff;
+
+    font-size: 1.4rem;
+
+    line-height: 1.4;
+
+    font-weight: 600;
+
+    letter-spacing: -0.015em;
+}
+
+
+/* ==========================================================
+   HERO DESCRIPTION
+   ========================================================== */
+
+.hero-section p {
+    position: relative;
+    z-index: 1;
+
+    max-width: 850px;
+
+    margin-top: 1rem;
+    margin-bottom: 0;
+
+    color: #aebfdb;
+
+    font-size: 0.98rem;
+
+    line-height: 1.75;
+}
+
+
+/* ==========================================================
+   12. SECTION HEADINGS
+   ========================================================== */
+
+.section-heading {
+    text-align: center;
+
+    margin:
+        3rem
+        0
+        2rem
+        0;
+}
+
+
+.section-heading .section-icon {
+    font-size: 2rem;
+
+    margin-bottom: 0.5rem;
+}
+
+
+.section-heading h2 {
+    margin: 0;
+
+    font-size: 2rem;
+
+    font-weight: 750;
+
+    color: #f5f8ff;
+}
+
+
+.section-heading p {
+    max-width: 800px;
+
+    margin:
+        0.6rem
+        auto
+        0
+        auto;
+
+    color: #8fa6c8;
+
+    font-size: 0.98rem;
+}
+
+
+/* ==========================================================
+   13. STAT CARDS
+   ========================================================== */
+
+.stat-card {
+    min-height: 155px;
+
+    padding: 1.6rem 1.2rem;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(115, 140, 190, 0.16);
+
+    background:
+        linear-gradient(
+            145deg,
+            #172033,
+            #111722
+        );
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.16);
+
+    transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease;
+}
+
+
+.stat-card:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(100, 145, 255, 0.35);
+
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+.stat-icon {
+    font-size: 1.9rem;
+
+    margin-bottom: 0.6rem;
+}
+
+
+.stat-value {
+    color: #f6f8ff;
+
+    font-size: 2rem;
+
+    line-height: 1;
+
+    font-weight: 800;
+}
+
+
+.stat-label {
+    margin-top: 0.65rem;
+
+    color: #8fa9d0;
+
+    font-size: 0.82rem;
+
+    font-weight: 500;
+}
+
+
+/* ==========================================================
+   14. FEATURE CARDS
+   ========================================================== */
+
+.feature-card {
+    min-height: 220px;
+
+    padding: 1.7rem;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(115, 140, 190, 0.15);
+
+    background:
+        linear-gradient(
+            145deg,
+            #151e2e,
+            #101621
+        );
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.14);
+
+    transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease;
+}
+
+
+.feature-card:hover {
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(102, 148, 255, 0.34);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.25);
+}
+
+
+.feature-icon {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 1rem;
+
+    border-radius: 13px;
+
+    background:
+        rgba(75, 112, 190, 0.18);
+
+    border:
+        1px solid rgba(100, 140, 220, 0.20);
+
+    font-size: 1.5rem;
+}
+
+
+.feature-card h3 {
+    margin:
+        0
+        0
+        0.7rem
+        0;
+
+    font-size: 1.15rem;
+
+    color: #f4f7ff;
+}
+
+
+.feature-card p {
+    margin: 0;
+
+    color: #9db1d0;
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   15. TECHNOLOGY CARDS
+   ========================================================== */
+
+.tech-card {
+    min-height: 110px;
+
+    padding: 1.25rem 0.8rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(115, 140, 190, 0.15);
+
+    background:
+        linear-gradient(
+            145deg,
+            #151d2c,
+            #101621
+        );
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.tech-card:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(105, 150, 255, 0.35);
+}
+
+
+.tech-icon {
+    font-size: 1.8rem;
+
+    margin-bottom: 0.55rem;
+}
+
+
+.tech-name {
+    color: #dce6f7;
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   16. INFO CARDS
+   ========================================================== */
+
+.info-card {
+    min-height: 300px;
+
+    padding: 2rem;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(115, 140, 190, 0.16);
+
+    background:
+        linear-gradient(
+            145deg,
+            #151e30,
+            #101621
+        );
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.16);
+}
+
+
+.info-card h3 {
+    margin-top: 0;
+
+    color: #f4f7ff;
+
+    font-size: 1.25rem;
+}
+
+
+.info-card p {
+    color: #9db1d0;
+
+    line-height: 1.7;
+}
+
+
+.info-card ul {
+    padding-left: 1.2rem;
+
+    margin-top: 1.2rem;
+}
+
+
+.info-card li {
+    margin-bottom: 0.6rem;
+
+    color: #aebed8;
+
+    line-height: 1.5;
+}
+
+
+.info-card li::marker {
+    color: #709cff;
+}
+
+
+/* ==========================================================
+   17. ARCHITECTURE
+   ========================================================== */
+
+.architecture-card {
+    min-height: 150px;
+
+    padding: 1.2rem;
+
+    text-align: center;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(90, 130, 210, 0.20);
+
+    background:
+        linear-gradient(
+            145deg,
+            #172238,
+            #111823
+        );
+}
+
+
+.architecture-icon {
+    font-size: 1.7rem;
+
+    margin-bottom: 0.5rem;
+}
+
+
+.architecture-card h4 {
+    margin:
+        0
+        0
+        0.45rem
+        0;
+
+    color: #eaf0ff;
+
+    font-size: 0.95rem;
+}
+
+
+.architecture-card p {
+    margin: 0;
+
+    color: #829bc1;
+
+    font-size: 0.72rem;
+
+    line-height: 1.5;
+}
+
+
+.architecture-arrow {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 150px;
+
+    color: #6f9eff;
+
+    font-size: 2rem;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   18. CTA SECTION
+   ========================================================== */
+
+.cta-section {
+    padding:
+        3rem
+        2rem;
+
+    margin-top: 1rem;
+
+    text-align: center;
+
+    border-radius: 24px;
+
+    border: 1px solid rgba(105, 145, 235, 0.20);
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(80, 120, 255, 0.12),
+            transparent 55%
+        ),
+        linear-gradient(
+            145deg,
+            #151e30,
+            #101621
+        );
+}
+
+
+.cta-icon {
+    font-size: 2.3rem;
+
+    margin-bottom: 0.7rem;
+}
+
+
+.cta-section h2 {
+    margin: 0;
+
+    color: #f5f8ff;
+
+    font-size: 1.7rem;
+}
+
+
+.cta-section p {
+    max-width: 700px;
+
+    margin:
+        0.8rem
+        auto
+        0;
+
+    color: #91a7ca;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   19. DEVELOPER SECTION
+   ========================================================== */
+
+.developer-section {
+    text-align: center;
+
+    padding:
+        3rem
+        1rem
+        2rem
+        1rem;
+}
+
+
+.developer-section .built-with {
+    margin-bottom: 0.7rem;
+
+    color: #8299bd;
+
+    font-size: 0.9rem;
+}
+
+
+.developer-section h2 {
+    margin: 0;
+
+    font-size: 1.55rem;
+
+    color: #edf3ff;
+}
+
+
+.developer-section p:not(.built-with) {
+    margin-top: 0.7rem;
+
+    color: #8da6ca;
+
+    font-size: 0.9rem;
+}
+
+
+.developer-section small {
+    display: block;
+
+    margin-top: 1rem;
+
+    color: #617795;
+
+    font-size: 0.72rem;
+}
+
+
+/* ==========================================================
+   20. EXECUTIVE DASHBOARD
+   ========================================================== */
+
+[data-testid="stMetric"] {
+    background:
+        linear-gradient(
+            145deg,
+            #151e2e,
+            #101621
+        );
+
+    border: 1px solid rgba(115, 140, 190, 0.15);
+
+    border-radius: 16px;
+
+    padding: 1rem;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+[data-testid="stMetricLabel"] {
+    color: #8fa8cb !important;
+}
+
+
+[data-testid="stMetricValue"] {
+    color: #f4f7ff !important;
+    font-weight: 750;
+}
+
+
+[data-testid="stMetricDelta"] {
+    color: #78e0a1 !important;
+}
+
+
+/* ==========================================================
+   21. PLOTLY CHART CONTAINERS
+   ========================================================== */
+
+[data-testid="stPlotlyChart"] {
+    border-radius: 14px;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================================
+   22. DATAFRAME / TABLES
+   ========================================================== */
+
+[data-testid="stDataFrame"] {
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(120, 145, 190, 0.15);
+}
+
+
+/* ==========================================================
+   23. ALERTS
+   ========================================================== */
+
+[data-testid="stAlert"] {
+    border-radius: 12px;
+}
+
+
+/* ==========================================================
+   24. SUCCESS MESSAGE
+   ========================================================== */
+
+[data-testid="stAlert"][kind="success"] {
+    background:
+        rgba(35, 125, 85, 0.18);
+
+    border:
+        1px solid rgba(60, 200, 130, 0.22);
+}
+
+
+/* ==========================================================
+   25. AI INSIGHTS
+   ========================================================== */
+
+.ai-insight-card {
+    padding: 2rem;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #102e25,
+            #0d241d
+        );
+
+    border:
+        1px solid rgba(60, 200, 130, 0.20);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+
+.ai-insight-card h2,
+.ai-insight-card h3 {
+    color: #4ce58c;
+}
+
+
+.ai-insight-card p,
+.ai-insight-card li {
+    color: #a8e6c2;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   26. FORECASTING
+   ========================================================== */
+
+.forecast-card {
+    padding: 1.5rem;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151e30,
+            #101621
+        );
+
+    border:
+        1px solid rgba(115, 140, 190, 0.16);
+}
+
+
+.forecast-card h3 {
+    color: #eef3ff;
+}
+
+
+.forecast-card p {
+    color: #94a9c9;
+}
+
+
+/* ==========================================================
+   27. HOME PAGE SPACING
+   ========================================================== */
+
+.hero-section + div {
+    margin-top: 0.5rem;
+}
+
+
+/* Reduce unnecessary Streamlit vertical gaps */
+
+.element-container {
+    margin-bottom: 0.25rem;
+}
+
+
+/* ==========================================================
+   28. SCROLLBAR
+   ========================================================== */
+
+::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #0b0f16;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #293752;
+
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3c5278;
+}
+
+
+/* ==========================================================
+   29. LINKS
+   ========================================================== */
+
+a {
+    color: #7ea8ff !important;
+
+    text-decoration: none;
+}
+
+
+a:hover {
+    color: #a8c4ff !important;
+}
+
+
+/* ==========================================================
+   30. CODE BLOCKS
+   ========================================================== */
+
+code {
+    color: #b9cbef;
+
+    background:
+        rgba(80, 100, 140, 0.15);
+
+    border-radius: 5px;
+
+    padding:
+        0.15rem
+        0.35rem;
+}
+
+
+pre {
+    border-radius: 12px !important;
+
+    border:
+        1px solid rgba(110, 140, 190, 0.15) !important;
+}
+
+
+/* ==========================================================
+   31. SPINNER
+   ========================================================== */
+
+[data-testid="stSpinner"] {
+    color: #79a3ff;
+}
+
+
+/* ==========================================================
+   32. MOBILE RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 1100px) {
+
+    .block-container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .hero-section {
+        padding:
+            2.7rem
+            2.5rem
+            2.8rem
+            2.5rem;
+    }
+
+    .hero-section h1 {
+        font-size: 3.6rem;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .block-container {
+        padding:
+            1.5rem
+            1rem
+            2rem
+            1rem;
+    }
+
+    .hero-section {
+        padding:
+            2.4rem
+            2rem
+            2.6rem
+            2rem;
+
+        border-radius: 22px;
+    }
+
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+
+    .hero-section h2 {
+        font-size: 1.25rem;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+
+    .section-heading h2 {
+        font-size: 1.7rem;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .block-container {
+        padding:
+            1rem
+            0.8rem
+            1.5rem
+            0.8rem;
+    }
+
+    .hero-section {
+        padding:
+            2rem
+            1.4rem
+            2.2rem
+            1.4rem;
+
+        border-radius: 18px;
+    }
+
+    .hero-badge {
+        font-size: 0.62rem;
+
+        padding:
+            0.4rem
+            0.7rem;
+
+        letter-spacing: 0.05em;
+    }
+
+    .hero-section h1 {
+        font-size: 2.45rem;
+
+        letter-spacing: -0.035em;
+    }
+
+    .hero-section h2 {
+        font-size: 1.08rem;
+
+        margin-top: 1rem;
+    }
+
+    .hero-section p {
+        font-size: 0.88rem;
+
+        line-height: 1.65;
+    }
+
+    .stat-card {
+        min-height: 130px;
+
+        padding: 1.2rem 0.8rem;
+    }
+
+    .stat-value {
+        font-size: 1.6rem;
+    }
+
+    .feature-card {
+        min-height: auto;
+
+        padding: 1.4rem;
+    }
+
+    .info-card {
+        min-height: auto;
+
+        padding: 1.5rem;
+    }
+
+    .architecture-arrow {
+        min-height: 60px;
+
+        transform: rotate(90deg);
+    }
+
+    .cta-section {
+        padding:
+            2.2rem
+            1.3rem;
+    }
+
+}
+
+
+/* ==========================================================
+   33. ACCESSIBILITY / REDUCED MOTION
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        transition: none !important;
+
+        animation: none !important;
+    }
+
+}
+
+
+/* ==========================================================
+   34. FINAL POLISH
+   ========================================================== */
+
+.stCaption {
+    color: #7f96b8;
+}
+
+
+small {
+    color: #7f96b8;
+}
+
+
+/* Prevent horizontal overflow */
+
+.stApp,
+[data-testid="stAppViewContainer"],
+.main {
+    overflow-x: hidden;
+}
